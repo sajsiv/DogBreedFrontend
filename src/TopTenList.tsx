@@ -11,7 +11,5 @@ export function TopTenList(props: TopTenListInterface): JSX.Element {
     </li>
   ));
 
-  return (
-       <ol>{arrayOfLeaderboardItems}</ol>
-     );
+  return <ol>{arrayOfLeaderboardItems}</ol>;
 }
