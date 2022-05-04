@@ -3,7 +3,7 @@ import breedDisplay from "./utils/breedDisplay";
 import urlBreedExtractor from "./utils/urlBreedExtractor";
 import dogImages from "./utils/interfaces";
 import axios from "axios";
-import './style.css'
+import "./style.css";
 
 function App(): JSX.Element {
   const [images, setImages] = useState<string[]>([]);
@@ -47,19 +47,28 @@ function App(): JSX.Element {
     console.log("after put request");
   };
 
-  const votes = counter === 1? "vote" : "votes"
+  const votes = counter === 1 ? "vote" : "votes";
 
   return (
     <div className="votingBox">
       {images.map((e) => (
-        <img className="image" height="300px" width="300px" src={e} key={e} alt="" />
+        <img
+          className="image"
+          height="300px"
+          width="300px"
+          src={e}
+          key={e}
+          alt=""
+        />
       ))}
       {breedNames.map((e, ix) => (
         <button className="button-9" key={ix} onClick={() => handleVote(e)}>
           {breedDisplay(e)}
         </button>
       ))}
-      <p>You've cast {counter} {votes}</p>
+      <p>
+        You've cast {counter} {votes}
+      </p>
     </div>
   );
 }
