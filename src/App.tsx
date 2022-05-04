@@ -58,7 +58,9 @@ function App(): JSX.Element {
   return (
     <div className="all">
       <Leaderboard />
-      <h1><b>🐕Which Dog Do You Prefer?🐕</b></h1>
+      <h1>
+        <b>🐕Which Dog Do You Prefer?🐕</b>
+      </h1>
       <div className="votingBox">
         <div className="imageBox">
           {images.map((e, ix) => (
