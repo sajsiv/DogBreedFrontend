@@ -3,22 +3,14 @@ import breedDisplay from "./utils/breedDisplay";
 import urlBreedExtractor from "./utils/urlBreedExtractor";
 import dogImages from "./utils/interfaces";
 import axios from "axios";
+import { Leaderboard } from "./Leaderboard";
+import { backendURL } from "./utils/backendUrl";
 import "./style.css";
 
 function App(): JSX.Element {
   const [images, setImages] = useState<string[]>([]);
   const [breedNames, setBreedNames] = useState<string[]>([]);
   const [counter, setCounter] = useState<number>(0);
-
-  const backendURL =
-    process.env.NODE_ENV === "production"
-      ? "https://dog-breed-voting-backend-c4b3.herokuapp.com/"
-      : "http://localhost:4001/";
-
-  // let frontendURL: string;
-  // process.env.NODE_ENV === "production"
-  //   ? (frontendURL = "https://incredible-kulfi-5ae6a9.netlify.app/")
-  //   : (frontendURL = "http://localhost:3000/");
 
   useEffect(() => {
     async function fetchImage() {
@@ -37,7 +29,7 @@ function App(): JSX.Element {
       console.log(breedNames);
     }
     postBreedNames();
-  }, [breedNames, backendURL]);
+  }, [breedNames]);
 
   const handleVote = async (breed: string) => {
     console.log("before put request");
@@ -50,6 +42,8 @@ function App(): JSX.Element {
   const votes = counter === 1 ? "vote" : "votes";
 
   return (
+    <div>
+      <Leaderboard />
     <div className="votingBox">
       {images.map((e) => (
         <img
@@ -70,6 +64,7 @@ function App(): JSX.Element {
         You've cast {counter} {votes}
       </p>
     </div>
+   </div>
   );
 }
 
