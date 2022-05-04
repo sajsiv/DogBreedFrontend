@@ -1,7 +1,6 @@
 import { topTenInterface } from "./Leaderboard";
 import breedDisplay from "./utils/breedDisplay";
 
-
 interface TopTenListInterface {
   data: topTenInterface[];
 }
