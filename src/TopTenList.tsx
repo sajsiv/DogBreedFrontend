@@ -12,9 +12,6 @@ export function TopTenList(props: TopTenListInterface): JSX.Element {
   ));
 
   return (
-    <>
-      <h1>Top 10 Dog Breeds</h1>
-      <ol>{arrayOfLeaderboardItems}</ol>
-    </>
-  );
+       <ol>{arrayOfLeaderboardItems}</ol>
+     );
 }

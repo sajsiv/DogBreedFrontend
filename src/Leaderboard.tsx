@@ -23,6 +23,7 @@ export function Leaderboard(): JSX.Element {
 
   return (
     <div>
+        <h1>Top 10 Dog Breeds</h1>
       <TopTenList data={topTen} />
       <button onClick={getTopTen}>REFRESH</button>
     </div>
