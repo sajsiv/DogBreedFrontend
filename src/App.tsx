@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { greet } from "./utils/greet";
+
 import urlBreedExtractor from "./utils/urlBreedExtractor";
 import dogImages from "./utils/interfaces";
 import axios from "axios";
@@ -7,11 +7,12 @@ import axios from "axios";
 function App(): JSX.Element {
   const [images, setImages] = useState<string[]>([]);
   const [breedNames, setBreedNames] = useState<string[]>([]);
+  const [counter, setCounter] = useState<number>(0);
 
   const backendURL =
     process.env.NODE_ENV === "production"
       ? "https://dog-breed-voting-backend-c4b3.herokuapp.com/"
-      : "http://localhost:4001/";
+      : "http://localhost:4000/";
 
   // let frontendURL: string;
   // process.env.NODE_ENV === "production"
@@ -27,25 +28,33 @@ function App(): JSX.Element {
       setBreedNames(jsonBody.message.map((e) => urlBreedExtractor(e)));
     }
     fetchImage();
-  }, []);
-
+  }, [counter]);
 
   useEffect(() => {
     async function postBreedNames() {
-      axios.post(backendURL, {breedNames,
-      });
+      await axios.post(backendURL, { breedNames });
       console.log(breedNames);
     }
     postBreedNames();
-  }, [breedNames]);
+  }, [breedNames, backendURL]);
+
+  const handleVote = async (breed: string) => {
+    console.log("before put request");
+    await axios.put(backendURL, { breedName: breed });
+    const counterPlusOne = counter + 1;
+    setCounter(counterPlusOne);
+    console.log("after put request");
+  };
 
   return (
     <div>
       {images.map((e) => (
-        <img src={e} key={e} />
+        <img src={e} key={e} alt="" />
       ))}
-      {breedNames.map((e) => (
-        <h1 key={e}>{e}</h1>
+      {breedNames.map((e, ix) => (
+        <button key={ix} onClick={() => handleVote(e)}>
+          {e}
+        </button>
       ))}
     </div>
   );
