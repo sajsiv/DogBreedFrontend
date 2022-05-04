@@ -32,15 +32,15 @@ function App(): JSX.Element {
 
   useEffect(() => {
     async function postBreedNames() {
-      axios.post(backendURL, { breedNames });
+      await axios.post(backendURL, { breedNames });
       console.log(breedNames);
     }
     postBreedNames();
   }, [breedNames, backendURL]);
 
-  const handleVote = (breed: string) => {
+  const handleVote = async (breed: string) => {
     console.log("before put request");
-    axios.put(backendURL, { breedName: breed });
+    await axios.put(backendURL, { breedName: breed });
     const counterPlusOne = counter + 1;
     setCounter(counterPlusOne);
     console.log("after put request");
