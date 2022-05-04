@@ -56,17 +56,18 @@ function App(): JSX.Element {
   console.log(images);
 
   return (
-    <div>
+    <div className="all">
       <Leaderboard />
+      <h1><b>🐕Which Dog Do You Prefer?🐕</b></h1>
       <div className="votingBox">
         <div className="imageBox">
           {images.map((e, ix) => (
             <img
               className="image"
-              height="300px"
-              width="300px"
               src={e}
               key={e}
+              width="300"
+              height="300"
               alt=""
               onClick={() => fetchNewBreedImage(imageURLBreedExtractor(e), ix)}
             />

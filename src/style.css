@@ -9,8 +9,14 @@
 }
 
 .image {
+  object-fit: fill;
   width: 100%;
-  height: 100%;
+  height: auto;
+}
+
+.all{
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+    Ubuntu, sans-serif;;
 }
 
 .button-9 {
