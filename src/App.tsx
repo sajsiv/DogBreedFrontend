@@ -6,6 +6,7 @@ import axios from "axios";
 import { Leaderboard } from "./Leaderboard";
 import { backendURL } from "./utils/backendUrl";
 import "./style.css";
+import imageURLBreedExtractor from "./utils/imageURLBreedExtractor";
 
 function App(): JSX.Element {
   const [images, setImages] = useState<string[]>([]);
@@ -40,25 +41,46 @@ function App(): JSX.Element {
 
   const votes = counter === 1 ? "vote" : "votes";
 
+  const fetchNewBreedImage = async (
+    imageURL: string,
+    imageStateIndex: number
+  ) => {
+    const res = await fetch(imageURL);
+    const randomImage = await res.json();
+    imageStateIndex === 0
+      ? setImages([randomImage.message, images[1]])
+      : setImages([images[0], randomImage.message]);
+  };
+
+  console.log(images);
+
   return (
-    <div>
+    <div className="all">
       <Leaderboard />
+      <h1>
+        <b>🐕Which Dog Do You Prefer?🐕</b>
+      </h1>
       <div className="votingBox">
-        {images.map((e) => (
-          <img
-            className="image"
-            height="300px"
-            width="300px"
-            src={e}
-            key={e}
-            alt=""
-          />
-        ))}
-        {breedNames.map((e, ix) => (
-          <button className="button-9" key={ix} onClick={() => handleVote(e)}>
-            {breedDisplay(e)}
-          </button>
-        ))}
+        <div className="imageBox">
+          {images.map((e, ix) => (
+            <img
+              className="image"
+              src={e}
+              key={e}
+              width="300"
+              height="300"
+              alt=""
+              onClick={() => fetchNewBreedImage(imageURLBreedExtractor(e), ix)}
+            />
+          ))}
+        </div>
+        <div className="buttonBox">
+          {breedNames.map((e, ix) => (
+            <button className="button-9" key={ix} onClick={() => handleVote(e)}>
+              {breedDisplay(e)}
+            </button>
+          ))}
+        </div>
         <p>
           You've cast {counter} {votes}
         </p>

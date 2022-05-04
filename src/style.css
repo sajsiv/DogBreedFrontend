@@ -3,15 +3,20 @@
   flex-direction: column;
   height: 650px;
   width: 450px;
-  padding-left: 12%;
-  padding-top: 4%;
-  gap: 10px;
+  margin: auto;
+  width: 10%;
   justify-content: center;
 }
 
 .image {
-  max-width: 300px;
-  max-height: 300px;
+  object-fit: fill;
+  width: 100%;
+  height: auto;
+}
+
+.all {
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+    Ubuntu, sans-serif;
 }
 
 .button-9 {
@@ -48,4 +53,15 @@
   box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
     rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0,
     rgba(50, 151, 211, 0.3) 0 0 0 4px;
+}
+
+.imageBox {
+  display: flex;
+  gap: 10px;
+}
+
+.buttonBox {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
 }
