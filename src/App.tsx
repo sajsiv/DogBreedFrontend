@@ -16,7 +16,6 @@ function App(): JSX.Element {
     async function fetchImage() {
       const res = await fetch("https://dog.ceo/api/breeds/image/random/2");
       const jsonBody: dogImages = await res.json();
-      console.log(jsonBody.message);
       setImages(jsonBody.message);
       setBreedNames(jsonBody.message.map((e) => urlBreedExtractor(e)));
     }
@@ -44,27 +43,27 @@ function App(): JSX.Element {
   return (
     <div>
       <Leaderboard />
-    <div className="votingBox">
-      {images.map((e) => (
-        <img
-          className="image"
-          height="300px"
-          width="300px"
-          src={e}
-          key={e}
-          alt=""
-        />
-      ))}
-      {breedNames.map((e, ix) => (
-        <button className="button-9" key={ix} onClick={() => handleVote(e)}>
-          {breedDisplay(e)}
-        </button>
-      ))}
-      <p>
-        You've cast {counter} {votes}
-      </p>
+      <div className="votingBox">
+        {images.map((e) => (
+          <img
+            className="image"
+            height="300px"
+            width="300px"
+            src={e}
+            key={e}
+            alt=""
+          />
+        ))}
+        {breedNames.map((e, ix) => (
+          <button className="button-9" key={ix} onClick={() => handleVote(e)}>
+            {breedDisplay(e)}
+          </button>
+        ))}
+        <p>
+          You've cast {counter} {votes}
+        </p>
+      </div>
     </div>
-   </div>
   );
 }
 
