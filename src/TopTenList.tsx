@@ -1,4 +1,6 @@
 import { topTenInterface } from "./Leaderboard";
+import breedDisplay from "./utils/breedDisplay";
+
 
 interface TopTenListInterface {
   data: topTenInterface[];
@@ -7,7 +9,7 @@ interface TopTenListInterface {
 export function TopTenList(props: TopTenListInterface): JSX.Element {
   const arrayOfLeaderboardItems: JSX.Element[] = props.data.map((item) => (
     <li key={item.id}>
-      {item.breed} ({item.votes})
+      {breedDisplay(item.breed)} ({item.votes})
     </li>
   ));
 

@@ -6,6 +6,7 @@ import axios from "axios";
 import { Leaderboard } from "./Leaderboard";
 import { backendURL } from "./utils/backendUrl";
 import "./style.css";
+import imageURLBreedExtractor from "./utils/imageURLBreedExtractor";
 
 function App(): JSX.Element {
   const [images, setImages] = useState<string[]>([]);
@@ -41,11 +42,20 @@ function App(): JSX.Element {
 
   const votes = counter === 1 ? "vote" : "votes";
 
+ const fetchNewBreedImage = async (imageURL:string, imageStateIndex: number) => {
+  const res = await fetch (imageURL)
+  const randomImage = await res.json()
+   imageStateIndex === 0? setImages([randomImage.message, images[1]]) : setImages([images[0], randomImage.message])
+ }
+
+ console.log(images)
+
   return (
     <div>
       <Leaderboard />
     <div className="votingBox">
-      {images.map((e) => (
+      <div className="imageBox">
+      {images.map((e, ix) => (
         <img
           className="image"
           height="300px"
@@ -53,13 +63,17 @@ function App(): JSX.Element {
           src={e}
           key={e}
           alt=""
+          onClick={() => fetchNewBreedImage(imageURLBreedExtractor(e), ix)}
         />
       ))}
+      </div>
+      <div className="buttonBox">
       {breedNames.map((e, ix) => (
         <button className="button-9" key={ix} onClick={() => handleVote(e)}>
           {breedDisplay(e)}
         </button>
       ))}
+      </div>
       <p>
         You've cast {counter} {votes}
       </p>
