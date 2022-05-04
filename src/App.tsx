@@ -3,16 +3,13 @@ import { useState, useEffect } from "react";
 import urlBreedExtractor from "./utils/urlBreedExtractor";
 import dogImages from "./utils/interfaces";
 import axios from "axios";
+import { Leaderboard } from "./Leaderboard";
+import { backendURL } from "./utils/backendUrl";
 
 function App(): JSX.Element {
   const [images, setImages] = useState<string[]>([]);
   const [breedNames, setBreedNames] = useState<string[]>([]);
   const [counter, setCounter] = useState<number>(0);
-
-  const backendURL =
-    process.env.NODE_ENV === "production"
-      ? "https://dog-breed-voting-backend-c4b3.herokuapp.com/"
-      : "http://localhost:4000/";
 
   // let frontendURL: string;
   // process.env.NODE_ENV === "production"
@@ -36,7 +33,7 @@ function App(): JSX.Element {
       console.log(breedNames);
     }
     postBreedNames();
-  }, [breedNames, backendURL]);
+  }, [breedNames]);
 
   const handleVote = async (breed: string) => {
     console.log("before put request");
@@ -47,7 +44,8 @@ function App(): JSX.Element {
   };
 
   return (
-    <div>
+    <>
+      <Leaderboard />
       {images.map((e) => (
         <img src={e} key={e} alt="" />
       ))}
@@ -56,7 +54,7 @@ function App(): JSX.Element {
           {e}
         </button>
       ))}
-    </div>
+    </>
   );
 }
 
