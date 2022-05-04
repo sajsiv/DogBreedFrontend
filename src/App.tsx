@@ -17,7 +17,6 @@ function App(): JSX.Element {
     async function fetchImage() {
       const res = await fetch("https://dog.ceo/api/breeds/image/random/2");
       const jsonBody: dogImages = await res.json();
-      console.log(jsonBody.message);
       setImages(jsonBody.message);
       setBreedNames(jsonBody.message.map((e) => urlBreedExtractor(e)));
     }
