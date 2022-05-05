@@ -14,12 +14,6 @@ export function Leaderboard(): JSX.Element {
   const [topTen, setTopTen] = useState<topTenInterface[]>([]);
   const [trigger, setTrigger] = useState<boolean>(false);
 
-  //  async function getTopTen() {
-  //     const response = await axios.get(backendURL + "topten");
-  //     await getImages(response.data)
-  //     setTopTen(response.data);
-  //   }
-
   useEffect(() => {
     async function getTopTen() {
       const response = await axios.get(backendURL + "topten");
@@ -47,7 +41,7 @@ export function Leaderboard(): JSX.Element {
   return (
     <div className="leaderboard">
       <h1>Top 10 Dog Breeds</h1>
-      <TopTenList data={topTen} />
+      <TopTenList data={topTen} setTopTen={setTopTen} />
       <button className="button-9" onClick={() => setTrigger(!trigger)}>
         REFRESH
       </button>
