@@ -26,17 +26,14 @@ function App(): JSX.Element {
   useEffect(() => {
     async function postBreedNames() {
       await axios.post(backendURL, { breedNames });
-      console.log(breedNames);
     }
     postBreedNames();
   }, [breedNames]);
 
   const handleVote = async (breed: string) => {
-    console.log("before put request");
     await axios.put(backendURL, { breedName: breed });
     const counterPlusOne = counter + 1;
     setCounter(counterPlusOne);
-    console.log("after put request");
   };
 
   const votes = counter === 1 ? "vote" : "votes";
@@ -51,8 +48,6 @@ function App(): JSX.Element {
       ? setImages([randomImage.message, images[1]])
       : setImages([images[0], randomImage.message]);
   };
-
-  console.log(images);
 
   return (
     <div className="all">

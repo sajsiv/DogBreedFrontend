@@ -27,7 +27,6 @@ export function TopTenList(props: TopTenListInterface): JSX.Element {
 
   const arrayOfLeaderboardItems = props.data.map((item) => {
     const cleanName = breedDisplay(item.breed);
-    console.log(item.image);
     return (
       <section key={item.id}>
         {item.image ? (
