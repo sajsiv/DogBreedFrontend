@@ -10,27 +10,26 @@ export function TopTenList(props: TopTenListInterface): JSX.Element {
     const cleanName = breedDisplay(item.breed);
     console.log(item.image);
     return (
-      <div key={item.id}>
+      <section key={item.id}>
         {item.image ? (
           <div>
-            <li>
+            <li className="top3Names">
               {cleanName} ({item.votes})
             </li>
-
             <img
-              className="image"
+              className="top3Image"
               src={item.image}
               alt={cleanName + " image"}
             />
           </div>
         ) : (
           <div>
-          <li>
-            {cleanName} ({item.votes})
-          </li>
+            <li>
+              {cleanName} ({item.votes})
+            </li>
           </div>
         )}
-      </div>
+      </section>
     );
   });
   return <ol>{arrayOfLeaderboardItems}</ol>;

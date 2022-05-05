@@ -57,6 +57,7 @@ function App(): JSX.Element {
   return (
     <div className="all">
       <div className="votingBox">
+        <h1 className="title">Who let the dogs app?</h1>
         <h1>
           <b>🐕Which Dog Do You Prefer?🐕</b>
         </h1>
