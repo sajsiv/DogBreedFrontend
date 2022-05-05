@@ -1,16 +1,7 @@
-.votingBox {
-  display: flex;
-  flex-direction: column;
-  height: 650px;
-  width: 450px;
-  margin: auto;
-  width: 10%;
-  justify-content: center;
-}
-
 .image {
   object-fit: fill;
-  width: 100%;
+  max-width: 50%;
+  flex: 50%;
   height: auto;
 }
 
@@ -55,13 +46,44 @@
     rgba(50, 151, 211, 0.3) 0 0 0 4px;
 }
 
+.votingBox {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 70%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
 .imageBox {
   display: flex;
+  flex: 50%;
   gap: 10px;
+  width: 75%;
 }
 
 .buttonBox {
   display: flex;
+  flex: 50%;
+  width: 75%;
   gap: 10px;
-  justify-content: center;
+  justify-content: left;
+  text-align: center;
+}
+
+@viewport {
+  width: device-width;
+  zoom: 1;
+}
+
+.leaderboard {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 60%;
+  margin: auto;
+  justify-content: left;
+  align-items: left;
+  border: 15px solid red;
 }

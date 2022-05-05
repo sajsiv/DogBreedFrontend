@@ -6,16 +6,31 @@ interface TopTenListInterface {
 }
 
 export function TopTenList(props: TopTenListInterface): JSX.Element {
-  const arrayOfLeaderboardItems: JSX.Element[] = props.data.map((item) => {
+  const arrayOfLeaderboardItems = props.data.map((item) => {
     const cleanName = breedDisplay(item.breed);
     console.log(item.image);
     return (
-      <li key={item.id}>
-        {cleanName} ({item.votes})
-        {props.data.indexOf(item) <= 2 && (
-          <img className="image" src={item.image} alt={cleanName + " image"} />
+      <div key={item.id}>
+        {item.image ? (
+          <div>
+            <li>
+              {cleanName} ({item.votes})
+            </li>
+
+            <img
+              className="image"
+              src={item.image}
+              alt={cleanName + " image"}
+            />
+          </div>
+        ) : (
+          <div>
+          <li>
+            {cleanName} ({item.votes})
+          </li>
+          </div>
         )}
-      </li>
+      </div>
     );
   });
   return <ol>{arrayOfLeaderboardItems}</ol>;

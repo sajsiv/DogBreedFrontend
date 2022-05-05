@@ -56,19 +56,16 @@ function App(): JSX.Element {
 
   return (
     <div className="all">
-      <Leaderboard />
-      <h1>
-        <b>🐕Which Dog Do You Prefer?🐕</b>
-      </h1>
       <div className="votingBox">
+        <h1>
+          <b>🐕Which Dog Do You Prefer?🐕</b>
+        </h1>
         <div className="imageBox">
           {images.map((e, ix) => (
             <img
               className="image"
               src={e}
               key={e}
-              width="300"
-              height="300"
               alt=""
               onClick={() => fetchNewBreedImage(imageURLBreedExtractor(e), ix)}
             />
@@ -85,6 +82,8 @@ function App(): JSX.Element {
           You've cast {counter} {votes}
         </p>
       </div>
+
+      <Leaderboard />
     </div>
   );
 }
