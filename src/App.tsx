@@ -5,7 +5,6 @@ import dogImages from "./utils/interfaces";
 import axios from "axios";
 import { Leaderboard } from "./Leaderboard";
 import { backendURL } from "./utils/backendUrl";
-import "./style.css";
 import imageURLBreedExtractor from "./utils/imageURLBreedExtractor";
 
 function App(): JSX.Element {
@@ -25,7 +24,9 @@ function App(): JSX.Element {
 
   useEffect(() => {
     async function postBreedNames() {
-      await axios.post(backendURL, { breedNames });
+      if (breedNames.length > 0) {
+        await axios.post(backendURL, { breedNames: breedNames });
+      }
     }
     postBreedNames();
   }, [breedNames]);
