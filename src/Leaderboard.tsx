@@ -42,7 +42,7 @@ export function Leaderboard(): JSX.Element {
     <div className="leaderboard">
       <h1>Top 10 Dog Breeds</h1>
       <TopTenList data={topTen} setTopTen={setTopTen} />
-      <button className="button-9" onClick={() => setTrigger(!trigger)}>
+      <button className="button-9" onClick={() => setTrigger((x) => !x)}>
         REFRESH
       </button>
     </div>

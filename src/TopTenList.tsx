@@ -9,7 +9,7 @@ interface TopTenListInterface {
 }
 
 export function TopTenList(props: TopTenListInterface): JSX.Element {
-  const [imageTrigger, setImageTrigger] = useState<boolean>(true);
+  const [, setImageTrigger] = useState<boolean>(true);
 
   async function getNewImage(dog: topTenInterface) {
     let url;
@@ -22,7 +22,7 @@ export function TopTenList(props: TopTenListInterface): JSX.Element {
     const imageURL = await axios.get(url);
     dog.image = imageURL.data.message;
     props.setTopTen(props.data);
-    setImageTrigger(!imageTrigger);
+    setImageTrigger((x) => !x);
   }
 
   const arrayOfLeaderboardItems = props.data.map((item) => {
