@@ -25,7 +25,9 @@ function App(): JSX.Element {
 
   useEffect(() => {
     async function postBreedNames() {
-      await axios.post(backendURL, { breedNames });
+      if (breedNames.length > 0) {
+        await axios.post(backendURL, { breedNames: breedNames });
+      }
     }
     postBreedNames();
   }, [breedNames]);
