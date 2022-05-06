@@ -5,7 +5,7 @@ import dogImages from "./utils/interfaces";
 import axios from "axios";
 import { Leaderboard } from "./Leaderboard";
 import { backendURL } from "./utils/backendUrl";
-import "./style.css";
+import "../public/style.css";
 import imageURLBreedExtractor from "./utils/imageURLBreedExtractor";
 
 function App(): JSX.Element {
