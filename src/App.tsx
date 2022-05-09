@@ -6,11 +6,14 @@ import axios from "axios";
 import { Leaderboard } from "./Leaderboard";
 import { backendURL } from "./utils/backendUrl";
 import imageURLBreedExtractor from "./utils/imageURLBreedExtractor";
+import useSound from "use-sound";
+import woof from "./sounds/who-let-the-dogs-short2.mp3";
 
 function App(): JSX.Element {
   const [images, setImages] = useState<string[]>([]);
   const [breedNames, setBreedNames] = useState<string[]>([]);
   const [counter, setCounter] = useState<number>(0);
+  const [play] = useSound(woof);
 
   useEffect(() => {
     async function fetchImage() {
@@ -34,6 +37,7 @@ function App(): JSX.Element {
   const handleVote = async (breed: string) => {
     await axios.put(backendURL, { breedName: breed });
     const counterPlusOne = counter + 1;
+    play();
     setCounter(counterPlusOne);
   };
 

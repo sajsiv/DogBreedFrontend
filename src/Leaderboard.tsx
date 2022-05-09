@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { TopTenList } from "./TopTenList";
 import { backendURL } from "./utils/backendUrl";
 import { useSound } from "use-sound";
-import bark from "./utils/who-let-the-dogs.mp3";
+import bark from "./sounds/who-let-the-dogs.mp3";
 
 export interface topTenInterface {
   id: number;
