@@ -154,7 +154,8 @@
     margin: auto;
     /* justify-content: right; */
     /* text-align: right; */
-    align-items: right;
+    align-items: center;
+    text-align:center;
     color: #405cf5;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
