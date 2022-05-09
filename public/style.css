@@ -109,10 +109,10 @@
 }
 
 .top3Image {
-  object-fit: fill;
-  max-height: 20%;
+  object-fit: cover;
+  height: 200px;
+  width: 200px;
   flex: 40%;
-  max-width: 40%;
 }
 
 .top3Names {
