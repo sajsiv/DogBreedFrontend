@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { TopTenList } from "./TopTenList";
 import { backendURL } from "./utils/backendUrl";
+import { useSound } from "use-sound";
+import bark from "./utils/who-let-the-dogs.mp3";
 
 export interface topTenInterface {
   id: number;
@@ -13,15 +15,17 @@ export interface topTenInterface {
 export function Leaderboard(): JSX.Element {
   const [topTen, setTopTen] = useState<topTenInterface[]>([]);
   const [trigger, setTrigger] = useState<boolean>(false);
+  const [play] = useSound(bark);
 
   useEffect(() => {
     async function getTopTen() {
       const response = await axios.get(backendURL + "topten");
       await getImages(response.data);
       setTopTen(response.data);
+      play();
     }
     getTopTen();
-  }, [trigger]);
+  }, [trigger, play]);
 
   async function getImages(dogItems: topTenInterface[]) {
     for (let i = 0; i < 3; i++) {
