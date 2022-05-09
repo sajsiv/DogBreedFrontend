@@ -91,6 +91,8 @@
 .title {
   font-size: 50px;
   color: #405cf5;
+  align-items: center;
+  text-align:center;
 }
 
 .leaderboard {
@@ -110,13 +112,52 @@
 
 .top3Image {
   object-fit: cover;
-  height: 200px;
-  width: 200px;
+  height: 180px;
+  width: 180px;
   flex: 40%;
+  border-radius: 10px;
 }
 
 .top3Names {
   color: #020085;
   font-weight: bold;
   font-size: 30px;
+}
+
+
+@media only screen and (max-width: 960px) {
+
+  .all {
+    display: block;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+      Ubuntu, sans-serif;
+    width: 100%;
+    height: 100%;
+    align-items:center;
+    text-align:center;
+  }
+
+  .votingBox {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  width: 610px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+  .leaderboard {
+    display: block;
+    flex-direction: column;
+    height: 70%;
+    width: 30%;
+    margin: auto;
+    /* justify-content: right; */
+    /* text-align: right; */
+    align-items: right;
+    color: #405cf5;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    /* font-size: 20px */
+  }
 }

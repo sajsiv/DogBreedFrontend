@@ -22,7 +22,6 @@ export function Leaderboard(): JSX.Element {
       const response = await axios.get(backendURL + "topten");
       await getImages(response.data);
       setTopTen(response.data);
-      play();
     }
     getTopTen();
   }, [trigger, play]);
