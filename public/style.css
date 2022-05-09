@@ -137,6 +137,7 @@
     display: block;
     flex-direction: column;
     width: 80%;
+    height:fit-content;
     margin: auto;
     align-items: center;
     text-align:center;
