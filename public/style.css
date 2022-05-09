@@ -1,13 +1,6 @@
 .image {
-  /* object-fit: fill;
-  max-width: 50%;
-  flex: 50%;
-  height: auto; */
-  /* float: left; */
+
   width:  300px;
-  /* justify-content: center;
-  text-align:center;
-  align-items: center; */
   height: 300px;
   object-fit: cover;
   border-radius: 10px;
@@ -83,11 +76,6 @@
   text-align: center;
 }
 
-@viewport {
-  width: device-width;
-  zoom: 1;
-}
-
 .title {
   font-size: 50px;
   color: #405cf5;
@@ -107,7 +95,6 @@
   color: #405cf5;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  /* font-size: 20px */
 }
 
 .top3Image {
@@ -141,7 +128,7 @@
   display: flex;
   flex-direction: column;
   height: 70%;
-  width: 610px;
+  width: 90%;
   margin: auto;
   justify-content: center;
   align-items: center;
@@ -149,16 +136,12 @@
   .leaderboard {
     display: block;
     flex-direction: column;
-    height: 70%;
-    width: 30%;
+    width: 80%;
     margin: auto;
-    /* justify-content: right; */
-    /* text-align: right; */
     align-items: center;
     text-align:center;
     color: #405cf5;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
-    /* font-size: 20px */
   }
 }
