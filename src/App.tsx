@@ -80,7 +80,7 @@ function App(): JSX.Element {
             </button>
           ))}
         </div>
-        <p>Click on a dog's image to see more photos</p>
+        <p className="text">Click on a dog's image to see more photos</p>
         <b>
           You've cast {counter} {votes}
         </b>
