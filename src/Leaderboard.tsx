@@ -22,10 +22,9 @@ export function Leaderboard(): JSX.Element {
       const response = await axios.get(backendURL + "topten");
       await getImages(response.data);
       setTopTen(response.data);
-      play();
     }
     getTopTen();
-  }, [trigger, play]);
+  }, [trigger]);
 
   async function getImages(dogItems: topTenInterface[]) {
     for (let i = 0; i < 3; i++) {
@@ -49,7 +48,10 @@ export function Leaderboard(): JSX.Element {
       <button
         id="leaderboard-refresh-button"
         className="button-9"
-        onClick={() => setTrigger((x) => !x)}
+        onClick={() => {
+          play();
+          setTrigger((x) => !x);
+        }}
       >
         REFRESH
       </button>
