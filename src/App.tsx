@@ -61,6 +61,7 @@ function App(): JSX.Element {
         <h1>
           <b>🐕Which Dog Do You Prefer?🐕</b>
         </h1>
+
         <div className="imageBox">
           {images.map((e, ix) => (
             <img
@@ -79,9 +80,10 @@ function App(): JSX.Element {
             </button>
           ))}
         </div>
-        <p>
+        <p className="text">Click on a dog's image to see more photos</p>
+        <b>
           You've cast {counter} {votes}
-        </p>
+        </b>
       </div>
 
       <Leaderboard />
