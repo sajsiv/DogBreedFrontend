@@ -1,4 +1,4 @@
-# Team C4B3 - Project
+# Dog Breed Voting Project
 
 Deployed Front-end: https://saj-zeri-patelman-dogvotes.netlify.app/   
 Deployed Back-end: https://dog-breed-voting-backend-c4b3.herokuapp.com/dogs   
@@ -31,7 +31,7 @@ Team: Anna-Zeri, Owen Dearman, Roshni Patel, Sajjan Sivia
 
 ### Database Schema:
 
-![dogsdb-QuickDBD-export.png](Team%20C4B3%20-%20Project%209956e929ad6c4b238d58338014f6b229/dogsdb-QuickDBD-export.png)
+![Database Schema](https://storage.googleapis.com/picboi-39298.appspot.com/final/EvGh2Yig_1000x800)
 
 **Problems Journal**
 
@@ -75,8 +75,8 @@ details: Problem accessing image URL from fetch from within the .map function fo
 
 ### CSS container diagram
 
-![Untitled](Team%20C4B3%20-%20Project%209956e929ad6c4b238d58338014f6b229/Untitled.png)
+![CSS Container Layout](https://storage.googleapis.com/picboi-39298.appspot.com/final/iyiPkVyQ_1000x800)
 
-![Untitled](Team%20C4B3%20-%20Project%209956e929ad6c4b238d58338014f6b229/Untitled%201.png)
+![Voting UI Screenshot](https://storage.googleapis.com/picboi-39298.appspot.com/final/jgvepeqR_1000x800)
 
-![Untitled](Team%20C4B3%20-%20Project%209956e929ad6c4b238d58338014f6b229/Untitled%202.png)
+![LeaderBoard UI Screenshot](https://storage.googleapis.com/picboi-39298.appspot.com/final/oVIP3paj_1000x800)
