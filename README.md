@@ -5,7 +5,7 @@ Deployed Back-end: https://dog-breed-voting-backend-c4b3.herokuapp.com/dogs
 Architecture diagram: https://whimsical.com/full-architechture-diagram-Gy2fqPv3hM3RGan49fgLwo   
 Project Board - FE: https://github.com/sajsiv/DogBreedFrontend/projects/1   
 Repo (Back-end): https://github.com/roshnihpatel/Dog-Breed-Voting-Backend   
-Repo (Front-end): https://github.com/sajsiv/DogBreedFrontend
+Repo (Front-end): https://github.com/sajsiv/DogBreedFrontend   
 UI Wireframe: https://whimsical.com/MD5VAUP2LUayKFLuZAbuf5    
 Team: Anna-Zeri, Owen Dearman, Roshni Patel, Sajjan Sivia   
 
