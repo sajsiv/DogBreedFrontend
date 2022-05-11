@@ -1,22 +1,13 @@
 # Team C4B3 - Project
 
-API Documentation: https://www.notion.so/weareacademy/Team-C4B3-Project-86c02d642fbd4c4d9fc27eb63ca1c4d0
-Architecture diagram: https://whimsical.com/full-architechture-diagram-Gy2fqPv3hM3RGan49fgLwo
-Deployed Back-end: https://dog-breed-voting-backend-c4b3.herokuapp.com/dogs
 Deployed Front-end: https://saj-zeri-patelman-dogvotes.netlify.app/
-Instructions: https://www.notion.so/Project-2-Dog-Breed-Voting-App-60b1fb926536433f97d7f14f2b841a84
-Journal: https://www.notion.so/weareacademy/Team-C4B3-Project-86c02d642fbd4c4d9fc27eb63ca1c4d0
+Deployed Back-end: https://dog-breed-voting-backend-c4b3.herokuapp.com/dogs
+Architecture diagram: https://whimsical.com/full-architechture-diagram-Gy2fqPv3hM3RGan49fgLwo
 Project Board - FE: https://github.com/sajsiv/DogBreedFrontend/projects/1
-Project Week: B(2)
 Repo (Back-end): https://github.com/roshnihpatel/Dog-Breed-Voting-Backend
 Repo (Front-end): https://github.com/sajsiv/DogBreedFrontend
-Scholars: Anna-Zeri,Owen Dearman,Roshni Patel,Sajjan Sivia
-Team: https://www.notion.so/Team-C4B3-afb8f173c7ae42a1943c36d68e3f1434
+Team: Anna-Zeri, Owen Dearman, Roshni Patel, Sajjan Sivia
 UI Wireframe: https://whimsical.com/MD5VAUP2LUayKFLuZAbuf5
-
-### Project Brief:
-
-[https://weareacademy.notion.site/Project-2-Dog-Breed-Voting-App-60b1fb926536433f97d7f14f2b841a84](https://www.notion.so/Project-2-Dog-Breed-Voting-App-60b1fb926536433f97d7f14f2b841a84)
 
 # Documentation
 
