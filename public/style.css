@@ -1,0 +1,153 @@
+.image {
+
+  width:  300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.all {
+  display: inline-flex;
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+    Ubuntu, sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+.button-9 {
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: #405cf5;
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+    rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+    Ubuntu, sans-serif;
+  font-size: 100%;
+  height: 44px;
+  line-height: 1.15;
+  margin: 12px 0 0;
+  outline: none;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all 0.2s, box-shadow 0.08s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+}
+
+.button-9:focus {
+  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+    rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0,
+    rgba(50, 151, 211, 0.3) 0 0 0 4px;
+}
+
+.votingBox {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  width: 610px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageBox {
+  display: flex;
+  flex: 50%;
+  gap: 10px;
+  width: 610px;
+}
+
+.buttonBox {
+  display: flex;
+  flex: 50%;
+  width: 610px;
+  gap: 10px;
+  justify-content: left;
+  text-align: center;
+}
+
+.title {
+  font-size: 50px;
+  color: #405cf5;
+  align-items: center;
+  text-align:center;
+}
+
+.leaderboard {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  width: 30%;
+  margin: auto;
+  /* justify-content: right; */
+  /* text-align: right; */
+  align-items: right;
+  color: #405cf5;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.top3Image {
+  object-fit: cover;
+  height: 180px;
+  width: 180px;
+  flex: 40%;
+  border-radius: 10px;
+}
+
+.top3Names {
+  color: #020085;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.text{
+  color: rgb(78, 78, 78);
+}
+
+
+@media only screen and (max-width: 960px) {
+
+  .all {
+    display: block;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+      Ubuntu, sans-serif;
+    width: 100%;
+    height: 100%;
+    align-items:center;
+    text-align:center;
+  }
+
+  .votingBox {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  width: 85%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+  .leaderboard {
+    display: block;
+    flex-direction: column;
+    width: 70%;
+    height:fit-content;
+    margin: auto;
+    align-items: center;
+    text-align:center;
+    color: #405cf5;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    padding-bottom: 15px;
+  }
+}
